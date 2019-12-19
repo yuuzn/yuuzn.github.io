@@ -4,7 +4,7 @@
     
     <entry>
         <title><![CDATA[私のJava開発学習ロードマップ]]></title>
-        <url>https://yuuzn.github.io/2019/12/20/java_study_step/</url>
+        <url>https://yuuzn.github.io/2019/12/20/java-study-step/</url>
         <content type="html"><![CDATA[<h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>Javaの勉強法（現在進行中）をいつかまとめたいな..と思っていたので、社内のAdventCalendarを契機にしてこの度重い腰をあげてまとめてみることにしました。そんな決意をした数日後にSpringFestに参加したのですが、そこでまさにjust fitなセミナーがあったため、その内容も紹介しつつ書いていきたいと思います。</p>
 <h2 id="なんでJava"><a href="#なんでJava" class="headerlink" title="なんでJava?"></a>なんでJava?</h2><p>基幹系のシステムに強いなどJavaを使うメリットは沢山あると思います。私の中では、記述がめんどくさい（≒丁寧に書く習慣が身に付く）、本や勉強度合いの目安になる試験が多い（≒言語を理解する勉強材料として最適）、大変なもの重めのもの迷ったら難しいほうをやる（≒他の言語に移るときに楽と思えそう）、という理由があって続けております。</p>
 <h2 id="なにからどこまで"><a href="#なにからどこまで" class="headerlink" title="なにからどこまで"></a>なにからどこまで</h2><p>私はリフティング型でJavaの勉強を積上げてきたので（長期的なゴールを意識していない）先のことはあまり考えていませんでした。そんなとき、前述のSpringFestのセミナーで今後の良い指針や今いる地点を知ることが出来ました。わかりやすいため、まずはそれを紹介いたします。</p>
