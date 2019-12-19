@@ -20,7 +20,7 @@
 <meta name="verify" content="all">
     <!--Title-->
 
-<title>Archives | Hexo</title>
+<title>アイネ・クライネ・ナハトムジーク | Hexo</title>
 
 <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 
@@ -29,9 +29,10 @@
 
     
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/archive.css">
+<link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 
     <!--script-->
 
@@ -40,6 +41,23 @@
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<script>
+  var admin = "GeekaholicLin";
+  admin = admin.split(",");
+  var gitalk = new Gitalk({
+    clientID: "xxxxx",
+    clientSecret: "xxxxx",
+    repo: "geekaholiclin.github.io",
+    owner: "GeekaholicLin",
+    admin: admin,
+    id: decodeURIComponent(location.pathname),
+    distractionFreeMode: false
+  })
+
+</script>
 
     
     
@@ -144,93 +162,16 @@ title="fork me" target="_blank">Geekaholic</a></p>
 </ul>
 
 
-        
-<div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-        
-      <li class="post-items" _href="/2019/12/20/java-study-step/">
-        <p class="info">2019</p>
-        <h2 class="post-item-title">私のJava開発学習ロードマップ</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>skill</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            java
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">12/20</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="私のJava開発学習ロードマップ"
-              data-leadcloud-url="/2019/12/20/java-study-step/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
+        <div id="main">
+    <article id="post">
+        <div id="post-header">
 
-      </li>
-        
-      <li class="post-items" _href="/2019/10/14/hello-world/">
-        <p class="info">2019</p>
-        <h2 class="post-item-title">Hello World</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>null</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            null
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">10/14</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="Hello World"
-              data-leadcloud-url="/2019/10/14/hello-world/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2019/09/22/ainekuraine/">
-        <p class="info">2019</p>
-        <h2 class="post-item-title">アイネ・クライネ・ナハトムジーク</h2>
-          <div class="article-meta">
+            <h1 id="アイネ・クライネ・ナハトムジーク">
+                
+                アイネ・クライネ・ナハトムジーク
+                
+            </h1>
+            <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
@@ -251,7 +192,7 @@ title="fork me" target="_blank">Geekaholic</a></p>
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">09/22</span>
+        <span class="date-meta ">2019/09/22</span>
     </span>
     
     
@@ -264,12 +205,88 @@ title="fork me" target="_blank">Geekaholic</a></p>
     
 </div>
 
-      </li>
+            
+            
+        </div>
         
-    </ul>
-  </div>
-</div>
+        <div id="post-body">
+            <p>色んな人の人生が重なり合って、<br>みんな一人で生きてるんじゃないんだって想えた映画でした。<br>斉藤さんの歌詞が何度も頭に浮かんだり、<br>伊坂さんの小説のシーンを思い出したり、<br>台詞にクスッと笑えたり、ジーンときたり、<br>作り手のメッセージが凄く伝わってきました。<br>どの世代の人が観ても楽しめる映画だと思います!<br>期待を遥かに超えた仕上がりに感無量！！</p>
 
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="http://example.com/author.jpg" alt="avatar"/>
+                
+                <a href="javascript:void(0)" class="high-song">high起来 &#128541;</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>
+                  
+                  Author:
+                  
+                    
+                    <a href="/about.html">yuuzn</a>
+                </li>
+                
+                <li>Published Date: <span>2019-09-22  00:00:00</span></li>
+                
+                <li>Updated Date: <span>2019-12-20  00:36:40</span></li>
+                
+                <li class="post-category">
+                    Categories:
+                    
+                    <a href="/categories/life/">life</a>
+                    
+                </li>
+                <li class="post-tags">
+                    Tags:
+                    
+                    <a href="/tags/movie/">movie</a>
+                    
+                    <a href="/tags/saitou-kazuyoshi/">saitou-kazuyoshi</a>
+                    
+                </li>
+                
+                <li> License: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="http://example.com/alipay.jpg" alt="支付宝付款" class="donate-img">
+                
+                <img src="http://example.com/wechat.png" alt="微信付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        <a href="/2019/10/14/hello-world/" class="pre-post fa fa-caret-left">Hello World</a>
+        
+        
+    </div>
+    
+    <div id="comments">
+        
+
+<script>
+  gitalk.render("comments");
+</script>
+
+
+
+    </div>
+    
+</div>
 
 
     </div>
@@ -306,8 +323,14 @@ title="fork me" target="_blank">Geekaholic</a></p>
     <li class="totop-btn fa fa-angle-up"></li>
     <li class="exchange-btn fa fa-exchange"></li>
   
+    <li class="toc-btn fa fa-list-ul"></li>
+    
     
 
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
     
 </ul>
 <p id="process"></p>
@@ -325,6 +348,8 @@ title="fork me" target="_blank">Geekaholic</a></p>
         </div>
     </div>
 </div>
+
+    
 
 
     <script src="/js/highsong.js"></script>
