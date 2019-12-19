@@ -11,8 +11,7 @@
 <p>日本Springユーザ会の土岐孝平さんのスライドから </p>
 <p><a href="https://www.slideshare.net/KouheiToki/1spring?qid=8c143518-f29c-4567-a562-3b29dc763d19&v=&b=&from_search=5" target="_blank" rel="noopener">入社1年目のプログラミング初心者がSpringを学ぶための手引き</a> </p>
 <p>この中の、 </p>
-<img src="/2019/12/20/java-study-step/java_step.png" title="よい学習ステップ">
-
+<p><img src="/image/java-study-step/java_step.png" alt title="よい学習ステップ"></p>
 <p>この図は、自分がいまどの地点にいるのかとても整理されます。<br>いきなりSpringで開発！ではなく、現実的な地に足のついたルートだとおもいます。</p>
 <p>本記事では図のなかでも一番上、最初の一歩のところの私流やりかたを紹介したいと思います。</p>
 <h2 id="1段目Javaの基本～ベースを埋め立てる～"><a href="#1段目Javaの基本～ベースを埋め立てる～" class="headerlink" title="1段目Javaの基本～ベースを埋め立てる～"></a>1段目Javaの基本～ベースを埋め立てる～</h2><p>私が勉強材料としたものは主に3つです。 </p>
@@ -97,6 +96,12 @@
     
     
     
+    
+    <entry>
+        <title><![CDATA[image]]></title>
+        <url>https://yuuzn.github.io/image/index.html</url>
+        <content type="html"></content>
+    </entry>
     
     
 </search>
