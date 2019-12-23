@@ -3,6 +3,113 @@
     
     
     <entry>
+        <title><![CDATA[コンストラクタとthisの話]]></title>
+        <url>https://yuuzn.github.io/2019/12/24/constructor-this/</url>
+        <content type="html"><![CDATA[<h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>前回に引き続きJavaです。今回は、かつて初見で自分がくじけた箇所、理解に時間がかかった箇所、そう、’コンストラクタ’　と’this’についてまとめたいと思います。</p>
+<h2 id="コンストラクタとは？"><a href="#コンストラクタとは？" class="headerlink" title="コンストラクタとは？"></a>コンストラクタとは？</h2><p>new演算子で作成した直後のオブジェクトのフィールドには、意味のある具体的な値ではなく、nullや0などが入っています。<br>コンストラクタを作成するとオブジェクト作成時に特定の値をフィールドにセットできるようになります。<br>コンストラクタは「構築者」という意味であるのも然り。<br>new演算子がオブジェクトを作成した直後、コンストラクタが起動して、オブジェクトに具体的な初期値をセットするのです。<br>コンストラクタはメソッドと似ているがメソッドではありません。名前がクラス名と同じで、戻り値型の指定もないのです。</p>
+<h2 id="thisってなに？"><a href="#thisってなに？" class="headerlink" title="thisってなに？"></a>thisってなに？</h2><p>thisはオブジェクト自身の参照なのですが、これはthisの働きを知ったほうが理解が早いです。次の次を読んでね</p>
+<h2 id="コンストラクタの役割"><a href="#コンストラクタの役割" class="headerlink" title="コンストラクタの役割"></a>コンストラクタの役割</h2><ul>
+<li>オブジェクトの初期化を行う(≒フィールドに適当な値をセットすること)</li>
+<li>オブジェクトを作成するのはnew演算子の働きで、それを適切に初期化するのがコンストラクタの役割</li>
+</ul>
+<h2 id="thisの役割"><a href="#thisの役割" class="headerlink" title="thisの役割"></a>thisの役割</h2><ul>
+<li>「これ(this)がフィールドです」とコンパイラに教える働き<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">Product</span><span class="params">()</span></span>&#123;</span><br><span class="line">    String code;</span><br><span class="line">    <span class="keyword">int</span> price;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Product</span><span class="params">(code, price)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.code = code;</span><br><span class="line">        <span class="keyword">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>※引数の名前がフィールド変数と異なるときはthisは不要</p>
+<ul>
+<li>thisはコンストラクタに限らず、メソッドの中でも、フィールド変数と同じ名前の変数があって区別しなければならないときには、this.○○という形で使う</li>
+</ul>
+<h2 id="コンストラクタの書き方、使い方"><a href="#コンストラクタの書き方、使い方" class="headerlink" title="コンストラクタの書き方、使い方"></a>コンストラクタの書き方、使い方</h2><ul>
+<li>new演算子とセットで用いる</li>
+<li>コンストラクタの定義の中ではreturn文以外ならどんな命令文でも書くことができる</li>
+<li>自前でコンストラクタの定義を書いた場合は、引数なしのコンストラクタ(デフォルトコンストラクタ)は呼び出せなくなる(←デフォルトコンストラクタが自動作成されないため呼び出してもコンパイルエラー)</li>
+</ul>
+<h2 id="thisの使い方"><a href="#thisの使い方" class="headerlink" title="thisの使い方"></a>thisの使い方</h2><ul>
+<li>this.[メンバ名]という形で使用</li>
+<li>return this; のように参照として単体でも使用可能</li>
+<li>コンストラクタやインスタンスメソッドなどの中で使用可能</li>
+<li>クラスメソッドの中で使用するとコンパイルエラーになる(ex. mainのようなクラスメソッドの中ではthisは使用不可)(←クラスメソッドはオブジェクトではないのでthisの値がわからないため)</li>
+</ul>
+<h2 id="コンストラクタのポイント"><a href="#コンストラクタのポイント" class="headerlink" title="コンストラクタのポイント"></a>コンストラクタのポイント</h2><ul>
+<li>オブジェクトの初期化を行う</li>
+<li>new演算子がオブジェクトを作成した後に必ず呼び出される</li>
+<li>クラスと同じ名前を持つ</li>
+<li>戻り値がない(voidも書かない)</li>
+<li>コンストラクタはオブジェクトに取り込まれない(≒コンストラクタの実体はクラスファイルの中にある)</li>
+<li>コンストラクタが定義されてない時のみ、デフォルトコンストラクタが暗黙の内に作成される</li>
+<li>デフォルトコンストラクタは常に引数がない</li>
+<li>コンストラクタを作成するとデフォルトコンストラクタは作成されなくなる</li>
+<li>コンストラクタはオーバーロード(多重定義)できる</li>
+</ul>
+<h2 id="thisのポイント"><a href="#thisのポイント" class="headerlink" title="thisのポイント"></a>thisのポイント</h2><ul>
+<li>thisはオブジェクト自身の参照である</li>
+<li>すべてのオブジェクトがthisを持つ</li>
+</ul>
+<h2 id="コンストラクタのちょっと細かい話"><a href="#コンストラクタのちょっと細かい話" class="headerlink" title="コンストラクタのちょっと細かい話"></a>コンストラクタのちょっと細かい話</h2><ul>
+<li>コンストラクタと同名のメソッドを作れる(←メソッド名の前に戻り値型を書いたとき)</li>
+<li>コンストラクタはクラス名と完全に同じでなければならない(←小文字と大文字も区別される)</li>
+<li>コンストラクタを複数定義することをコンストラクタのオーバーロード(多重定義)という</li>
+<li>引数の構成(型の種類、個数、並び順、のいずれか)が異なれば、コンストラクタを幾つでも作成可能<br>※引数の名前を異なるようにしただけではオーバーロードにはならない<br>※アクセス修飾子を異なるようにしただけではオーバーロードにならない</li>
+</ul>
+<h3 id="デフォルトコンストラクタ"><a href="#デフォルトコンストラクタ" class="headerlink" title="デフォルトコンストラクタ"></a>デフォルトコンストラクタ</h3><ul>
+<li><p>見ることはできないが実体は以下のようなもの</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Book</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">super</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>デフォルトコンストラクタはコンパイラが作成する見えないコンストラクタである</p>
+</li>
+<li><p>コンパイラが作成しclassファイル(実行可能なJavaバイトコードのファイル)に挿入される</p>
+</li>
+<li><p>デフォルトコンストラクタのアクセス修飾子はクラスと同じになる</p>
+<h2 id="thisのちょっと細かい話"><a href="#thisのちょっと細かい話" class="headerlink" title="thisのちょっと細かい話"></a>thisのちょっと細かい話</h2></li>
+<li><p>見えないところでコンパイラは全てのフィールド変数にthisを付けている</p>
+</li>
+<li><p>プログラマがthisを付けるのはコンパイラの作業を助けるため</p>
+</li>
+<li><p>thisは実行時にはオブジェクトの参照に置き換えられる</p>
+</li>
+<li><p>this()によってコンストラクタを呼び出せる</p>
+<h3 id="this-の紹介"><a href="#this-の紹介" class="headerlink" title="this()の紹介"></a>this()の紹介</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">Christmas</span><span class="params">()</span></span>&#123;</span><br><span class="line">    String santaClausName;</span><br><span class="line">    String presentCode;</span><br><span class="line">    <span class="keyword">int</span> cakeCount;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Christmas</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.santaClausName = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">this</span>.presentCode＝<span class="string">""</span>;</span><br><span class="line">        <span class="keyword">this</span>.cakeCount = <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Christmas</span><span class="params">(String santaClausName, String presentCode)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.santaClausName = santaClausName;</span><br><span class="line">        <span class="keyword">this</span>.presentCode＝ presentCode;</span><br><span class="line">        <span class="keyword">this</span>.cakeCount = <span class="number">5</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Christmas</span><span class="params">(String santaClausName, String presentCode, <span class="keyword">int</span> cakeCount)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.santaClausName = santaClausName;</span><br><span class="line">        <span class="keyword">this</span>.presentCode＝ presentCode;</span><br><span class="line">        <span class="keyword">this</span>.cakeCount = cakeCount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>上記のコードは見てわかる通り繰り返しが多いです。this()を使ってコードを簡易化してみましょう。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> class <span class="title">Christmas</span><span class="params">()</span></span>&#123;</span><br><span class="line">    String santaClausName;</span><br><span class="line">    String presentCode;</span><br><span class="line">    <span class="keyword">int</span> cakeCount;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Christmas</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(<span class="string">""</span>, <span class="string">""</span>, <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Christmas</span><span class="params">(String santaClausName, String presentCode)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(santaClausName, presentCode, <span class="number">5</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Christmas</span><span class="params">(String santaClausName, String presentCode, <span class="keyword">int</span> cakeCount)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.santaClausName = santaClausName;</span><br><span class="line">        <span class="keyword">this</span>.presentCode＝ presentCode;</span><br><span class="line">        <span class="keyword">this</span>.cakeCount = cakeCount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>this()はコンストラクタが他のコンストラクタを呼び出す書き方</li>
+<li>this()には注意が2点ある <ul>
+<li>this()はコンストラクタの最初の行に書かなければならない</li>
+<li>this()はメソッドでは使えない</li>
+</ul>
+</li>
+</ul>
+<h2 id="所感"><a href="#所感" class="headerlink" title="所感"></a>所感</h2><p>こうしてまとめてみると、案外ひっかからずにすんなり読めそうな内容ですね。かつて言語の勉強を始めたばかりの頃の私は大いにつまずきました(笑)。かつての自分に言ってあげたい。ひとつひとつ調べて理解しようね、と。わからないことが複数になると何がわからないのかもわからなくなって迷走するのでね、と。<br>おっと、言い忘れそうなのでこの辺で。メリークリスマスイブ☆彡</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote>
+<ul>
+<li>「わかりやすいJava オブジェクト指向編　/ 川場隆　(秀和システム)」  </li>
+<li>「優しく学ぶ　Javaプログラマ　/　山本道子　（翔泳社）」</li>
+</ul>
+</blockquote>
+]]></content>
+        
+        <categories>
+            
+            <category> skill </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
         <title><![CDATA[私のJava開発学習ロードマップ]]></title>
         <url>https://yuuzn.github.io/2019/12/20/java-study-step/</url>
         <content type="html"><![CDATA[<h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>Javaの勉強法（現在進行中）をいつかまとめたいな..と思っていたので、社内のAdventCalendarを契機にしてこの度重い腰をあげてまとめてみることにしました。そんな決意をした数日後にSpringFestに参加したのですが、そこでまさにjust fitなセミナーがあったため、その内容も紹介しつつ書いていきたいと思います。</p>
