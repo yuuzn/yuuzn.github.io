@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuuzn.github.io/"/>
-  <updated>2019-12-23T14:09:35.116Z</updated>
+  <updated>2020-03-20T09:52:53.650Z</updated>
   <id>https://yuuzn.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>社会人2年目の振り返り～その１～</title>
+    <link href="https://yuuzn.github.io/2020/03/20/second_year_of_working_life/"/>
+    <id>https://yuuzn.github.io/2020/03/20/second_year_of_working_life/</id>
+    <published>2020-03-19T15:00:00.000Z</published>
+    <updated>2020-03-20T09:52:53.650Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="社会人2年目の振り返り～その１～"><a href="#社会人2年目の振り返り～その１～" class="headerlink" title="社会人2年目の振り返り～その１～"></a>社会人2年目の振り返り～その１～</h1><h2 id="まえおき"><a href="#まえおき" class="headerlink" title="まえおき"></a>まえおき</h2><p>同期と、あと一週間ちょっと仕事したら社会人3年目になるね&gt;&lt;ってLineしてて、不安だ不安だ、このくらいできたらクリア！みたいな指標ほしいよねって話してて、あ、ならこれができたらLevel.2とか良くない？みたいな話になって、い～ね～、そしたらJava開発ロードマップとかからレベル分けしてみるか！ゲーム作ろう(笑)とジョークぶち込んでみたりして、そしたら、まずは、『この1年でできるようになったことを書き出す』といいかもってなって、やってみた、次第でございます。（長い</p><h2 id="できるようになったこと"><a href="#できるようになったこと" class="headerlink" title="できるようになったこと"></a>できるようになったこと</h2><ul><li>春に応用情報技術者試験に突破したこと</li><li>PJのPHPフレームワークの理解が進んだこと</li><li>SpringBootで簡易なCRUDアプリを作成すること</li><li>長い１つのクエリを理解すること</li><li>クエリを設計すること</li><li>テスト項目を洗い出せること</li><li>日本語文章力がましになったこと</li><li>日々気持ちの良い報・連・相を心掛けること</li><li>思考を深めること</li><li>時間ログをつけること</li><li>1日を逆算して行動すること</li><li>7人以内の人の前で話すこと</li><li>日々無理のない自炊継続</li><li>嫌なことがあっても気持ちを切り替えられること</li><li>全体主義で考えて行動すること</li><li>みんなの幸せを考えること</li><li>広報活動</li><li>シャイなので元来目立ちたくないが、人前に立つこと</li><li>１つの意見を即信じ込まずに物事を多方向から見ること</li><li>ギターでコードを鳴らすこと</li><li>会いたい人に会う生活</li><li>一瞬の恥を気にしないでいられること</li><li>言わないほうがいいことを言わずにいられること</li><li>気持ちをストレートに出さないこと</li><li>色んなスタンスの人がいることを理解すること</li><li>財政管理の記録を見直すこと</li><li>頭の中で次はこうしようと反省会すること</li><li>早起き生活を再開すること</li><li>同期と更に親交を深めること</li><li>ノート（手元に残したいメモ）とホワイトボード（その場の思考整理）を使い分けられるようになったこと</li><li>時間を忘れるほど夢中になれる趣味が見つかったこと</li><li>本の著者のイベントに参加すること</li><li>社外のJava系セミナーに参加すること</li></ul><h2 id="できるようになりたいこと"><a href="#できるようになりたいこと" class="headerlink" title="できるようになりたいこと"></a>できるようになりたいこと</h2><ul><li>英語で話すこと</li><li>英語の記事を読んで正確に理解できること</li><li>考えてから話すこと</li><li>焦らないこと</li><li>高速タイピング</li><li>ブラインドタッチ</li><li>毎日日記をつけること</li><li>依存しないこと</li><li>アウトプットを増やす</li><li>しなやかになめらかに話すこと</li><li>とうとうと勢いで話さずに穏やかにゆっくり話すこと</li><li>お客さんの前でも動揺しないこと</li><li>利益がどうやったら増えるか考えること</li><li>自己反省会を頭の中だけでやらずに書き出すこと</li><li>目を見て話すこと</li><li>姿勢をよくすること</li><li>身体を柔らかくすること</li><li>冬でも太らないこと</li><li>持ち物をシンプルにすること</li><li>ショートカットキーを使いこなすこと</li><li>毎月月末に自分反省会をすること</li><li>長期的な到着地点を設定しておくこと</li><li>映画やドラマなどをたまには見て参考にすること</li><li>上手くいった時の記録も残すこと</li><li>資格勉強習慣を再構築すること</li><li>クリエイティブなことに時間を多くさけるように定常作業を素早く終える処理能力を高めること</li><li>毎日本を少しでも読むこと</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;社会人2年目の振り返り～その１～&quot;&gt;&lt;a href=&quot;#社会人2年目の振り返り～その１～&quot; class=&quot;headerlink&quot; title=&quot;社会人2年目の振り返り～その１～&quot;&gt;&lt;/a&gt;社会人2年目の振り返り～その１～&lt;/h1&gt;&lt;h2 id=&quot;まえおき&quot;&gt;&lt;a 
+      
+    
+    </summary>
+    
+    
+      <category term="life" scheme="https://yuuzn.github.io/categories/life/"/>
+    
+    
+      <category term="consideration" scheme="https://yuuzn.github.io/tags/consideration/"/>
+    
+  </entry>
   
   <entry>
     <title>コンストラクタとthisの話</title>
