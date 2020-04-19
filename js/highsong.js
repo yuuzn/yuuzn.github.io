@@ -114,7 +114,7 @@ function highSong() {
     var t = 30;
     var n = 350;
     var r = 350;
-    var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+    var i = "/music/inaka no daisougen.mp3";
     var s = "mw-harlem_shake_me";
     var o = "im_first";
     var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
