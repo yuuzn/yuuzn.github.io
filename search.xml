@@ -25,7 +25,7 @@
 <h2 id="所感"><a href="#所感" class="headerlink" title="所感"></a>所感</h2><p>結局、自身がどこに時間割きたいか？ですよね（笑）<br>私の場合、うらっかわのとこは脳トレ的な面白さはありますが、自己満に陥りやすい、ので、<br>表側の、ユーザが見るところ、使いやすいか、そもそもこのアプリの意義は？問題解決できてる？？<br>などを考えるところに重きを置いていたい。<br>結果的にAndroidアプリ開発は自分にぴったりと思えました。ひとそれぞれです。</p>
 <h2 id="補足"><a href="#補足" class="headerlink" title="補足"></a>補足</h2><p>ネイティブアプリやり始めるなら両OS対応のFlutterで。というのももちろん必要と思います。<br>が、AndroidStudioのアップデートがFlutterに反映されるのにラグが有ったり、<br>その他、開発初心者には少々学習のハードル上がる.. などあるため、<br>とっかかりとしてAndroidStudioで始めることはいいかもなと。<br>また、かなり凝ったアプリにした場合、Flutterでは再現難しく、結局個々のOS依存で書くところはある、というお声も。<br>開発初心者が始める、つまずきにくくする、のであれば、AndroidStudioからがよいのではと！<br>教材もおおいですし</p>
 <h2 id="よって"><a href="#よって" class="headerlink" title="よって"></a>よって</h2><p>Java学習ロードマップに落とし込むなら、<br>Androidアプリ開発は、SpringBootでのWebアプリ開発より、先にやって平気な内容、むしろJavaの構文理解したら、<br>アウトプットとして、すぐ簡易スマホアプリを作ってみることをおすすめしたい。<br>じぶんのスマホにMyAppがある喜びをぜひ体験して欲しい..!!<br>ま、ある程度出来上がってきたら、、私もFlutter始めるところではあります。</p>
-<p>それではよい12月を！2020年もあと残り28日（残7.7%だって）☆<br><img src="/image/AndroidApp-greatest/AndroidDev.png" alt title="AndroidDev_love"></p>
+<p>それではよい12月を！2020年もあと残り28日（残7.7%だって）☆<br><img src="/image/AndroidApp-greatest/AndroidDevLove.png" alt title="AndroidDev_love"></p>
 ]]></content>
         
         <categories>
