@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuuzn.github.io/"/>
-  <updated>2020-12-04T01:20:10.542Z</updated>
+  <updated>2020-12-07T05:40:29.384Z</updated>
   <id>https://yuuzn.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>APIを使って『名言』をスマホに表示してみた</title>
+    <link href="https://yuuzn.github.io/2020/12/07/meigenAPIdisplay/"/>
+    <id>https://yuuzn.github.io/2020/12/07/meigenAPIdisplay/</id>
+    <published>2020-12-06T15:00:00.000Z</published>
+    <updated>2020-12-07T05:40:29.384Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>いま作っているAndroidアプリで、ユーザが毎日アプリを開いてくれるにはどうしたらいいかな.. と考えた結果、</p><ul><li>ユーザにとって有益な情報が載っている</li><li>毎日内容が更新される</li><li>癒される</li></ul><p>これらが最低限必要だなと思いました。<br>これらを満たす仕様はなんだろう？<br>自分だったら何が載っていたらアプリみる？？<br>っってことで、考えた末行きついたのが、『名言ティッカー』！！です。名言が流れてきます。（予定）</p><h2 id="設計"><a href="#設計" class="headerlink" title="設計"></a>設計</h2><p>名言をデータベースにぶちこむのは、ナンセンスかな&amp;著作権問題もありますし&amp;中身の自動更新が理想ですし..<br><a href="http://www.meigensyu.com/quotations/view/2647.html" target="_blank" rel="noopener">http://www.meigensyu.com/quotations/view/2647.html</a><br>また、↑↑こういう名言サイトからスクレイピングするのもできることではありますが、承諾など必要なため、あとあと大きく使いたい時に大変になる。<br>というところから、<br>フリーで使えるAPIを探し、それを取り込むことにしました。</p><p>私が採用した名言API<br>↓<br>Rakuten Rapid APIの『Random Famous Quotes』です<br><a href="https://api.rakuten.net/andruxnet/api/random-famous-quotes/endpoints" target="_blank" rel="noopener">https://api.rakuten.net/andruxnet/api/random-famous-quotes/endpoints</a></p><h2 id="実装ポイント（私がハマったところ）"><a href="#実装ポイント（私がハマったところ）" class="headerlink" title="実装ポイント（私がハマったところ）"></a>実装ポイント（私がハマったところ）</h2><ol><li><p>APIの登録お忘れなく<br>ソースコードを書き終えたと思ったのに、名言を取得できない！なんで？？と数時間あーだこーだ悩んだ挙句、<br>Rakuten Rapid APIの画面で、「その名言を使用するよ」と登録的なのをしなきゃいけなかった。時間無駄にした感半端ないので皆さんお気を付けを。（アカウント登録の後、各APIの登録を）</p></li><li><p>HTTP通信方法の選択<br>AndroidでHTTP通信したい時のやり方は数種類ある<br><a href="https://qiita.com/riversun/items/5f78d47a3d95f857d34f" target="_blank" rel="noopener">https://qiita.com/riversun/items/5f78d47a3d95f857d34f</a>  </p></li></ol><ul><li>HttpUrlConnection  </li><li>OkHttp3<br>など<br>最近人気らしい、OkHttp3でやろうとしたが、私はうまくいかなかったため、HttpUrlConnectionにしました（古典的</li></ul><ol start="3"><li>そして非同期処理するならAsyncTaskを使おう<br><a href="https://qiita.com/watataku8911/items/a34ff1f5927c0b32f0ab" target="_blank" rel="noopener">https://qiita.com/watataku8911/items/a34ff1f5927c0b32f0ab</a>  </li></ol><ol start="4"><li><p>URLどこで分割するか問題<br>あとはURLを分割してセットしていく所も地味にハマりました<br>アクセスしたいURL：『<a href="https://andruxnet-random-famous-quotes.p.rapidapi.com/?cat=famous&amp;count=1』" target="_blank" rel="noopener">https://andruxnet-random-famous-quotes.p.rapidapi.com/?cat=famous&amp;count=1』</a></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> String API_URL_PREFIX = <span class="string">"andruxnet-random-famous-quotes.p.rapidapi.com"</span>;</span><br><span class="line">HttpURLConnection con = <span class="keyword">null</span>;</span><br><span class="line">Uri.Builder uriBuilder = <span class="keyword">new</span> Uri.Builder();</span><br><span class="line">uriBuilder.scheme(<span class="string">"https"</span>);</span><br><span class="line">uriBuilder.authority(API_URL_PREFIX);</span><br><span class="line">uriBuilder.path(<span class="string">"/"</span>);</span><br><span class="line">uriBuilder.appendQueryParameter(<span class="string">"cat"</span>,<span class="string">"famous"</span>);</span><br><span class="line">uriBuilder.appendQueryParameter(<span class="string">"count"</span>,<span class="string">"1"</span>);</span><br><span class="line"><span class="keyword">final</span> String uriStr = uriBuilder.build().toString();</span><br></pre></td></tr></table></figure></li><li><p>APIのパスワードなど<br>API使用時のパスワードなど追記してあげてね</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">URL url = <span class="keyword">new</span> URL(uriStr);</span><br><span class="line">con = (HttpURLConnection) url.openConnection();</span><br><span class="line">con.setRequestProperty(<span class="string">"x-rapidapi-host"</span>, <span class="string">"andruxnet-random-famous-quotes.p.rapidapi.com"</span>);</span><br><span class="line">con.setRequestProperty(<span class="string">"x-rapidapi-key"</span>, <span class="string">"ぱすわーど"</span>);</span><br><span class="line">con.setRequestMethod(<span class="string">"GET"</span>);</span><br><span class="line">con.setDoInput(<span class="keyword">true</span>);</span><br></pre></td></tr></table></figure></li><li><p>JSON→文字列取得<br>あとはJSONで返ってきたものを、文字列に落とし込むところとかかな</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">JSONArray array = <span class="keyword">new</span> JSONArray(result);</span><br><span class="line">JSONObject json = array.getJSONObject(<span class="number">0</span>);</span><br><span class="line">String message = json.getString(<span class="string">"quote"</span>);</span><br><span class="line">String author = json.getString(<span class="string">"author"</span>);</span><br></pre></td></tr></table></figure></li><li><p>うっかり記載漏れ注意<br>AndoroidManifest.xmlにインターネットアクセス許可書くのお忘れなく！</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name=<span class="string">"android.permission.INTERNET"</span> /&gt;</span><br></pre></td></tr></table></figure></li></ol><h2 id="今後"><a href="#今後" class="headerlink" title="今後"></a>今後</h2><p>いまは英語の名言が表示されるのみなので、<br>あいだにGoogle翻訳などかませて、<br>日本語化したい。（日本語の名言APIは未だ無さそうだったので致し方ない）<br>そして現在苦戦している動き、『名言が流れてくる～』機能ですね。その名も『名言ティッカー』！！<br>今はアプリ起動→初回名言表示→ボタン押下で名言更新→別の名言表示って流れですが、<br>横から名言が流れてくるように、がんばります<br>ではではこの辺で。HappyBirthday★  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;いま作っているAndroidアプリで、ユーザが毎日アプリを開いてくれるにはどうしたらいいかな.. と考えた結果、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="skill" scheme="https://yuuzn.github.io/categories/skill/"/>
+    
+    
+      <category term="Android" scheme="https://yuuzn.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Androidアプリ開発いいよって話</title>
