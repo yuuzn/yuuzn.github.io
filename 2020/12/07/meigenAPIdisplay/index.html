@@ -232,7 +232,7 @@
 <li>そして非同期処理するならAsyncTaskを使おう<br><a href="https://qiita.com/watataku8911/items/a34ff1f5927c0b32f0ab" target="_blank" rel="noopener">https://qiita.com/watataku8911/items/a34ff1f5927c0b32f0ab</a>  </li>
 </ol>
 <ol start="4">
-<li><p>URLどこで分割するか問題<br>あとはURLを分割してセットしていく所も地味にハマりました<br>アクセスしたいURL：『<a href="https://andruxnet-random-famous-quotes.p.rapidapi.com/?cat=famous&amp;count=1』" target="_blank" rel="noopener">https://andruxnet-random-famous-quotes.p.rapidapi.com/?cat=famous&amp;count=1』</a></p>
+<li><p>URLどこで分割するか問題<br>あとはURLを分割してセットしていく所も地味にハマりました<br>アクセスしたいURL：『<a href="https://andruxnet-random-famous-quotes.p.rapidapi.com/?cat=famous&amp;count=1" target="_blank" rel="noopener">https://andruxnet-random-famous-quotes.p.rapidapi.com/?cat=famous&amp;count=1</a> 』</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> String API_URL_PREFIX = <span class="string">"andruxnet-random-famous-quotes.p.rapidapi.com"</span>;</span><br><span class="line">HttpURLConnection con = <span class="keyword">null</span>;</span><br><span class="line">Uri.Builder uriBuilder = <span class="keyword">new</span> Uri.Builder();</span><br><span class="line">uriBuilder.scheme(<span class="string">"https"</span>);</span><br><span class="line">uriBuilder.authority(API_URL_PREFIX);</span><br><span class="line">uriBuilder.path(<span class="string">"/"</span>);</span><br><span class="line">uriBuilder.appendQueryParameter(<span class="string">"cat"</span>,<span class="string">"famous"</span>);</span><br><span class="line">uriBuilder.appendQueryParameter(<span class="string">"count"</span>,<span class="string">"1"</span>);</span><br><span class="line"><span class="keyword">final</span> String uriStr = uriBuilder.build().toString();</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>APIのパスワードなど<br>API使用時のパスワードなど追記してあげてね</p>
@@ -246,7 +246,7 @@
 
 </li>
 </ol>
-<h2 id="今後"><a href="#今後" class="headerlink" title="今後"></a>今後</h2><p>いまは英語の名言が表示されるのみなので、<br>あいだにGoogle翻訳などかませて、<br>日本語化したい。（日本語の名言APIは未だ無さそうだったので致し方ない）<br>そして現在苦戦している動き、『名言が流れてくる～』機能ですね。その名も『名言ティッカー』！！<br>今はアプリ起動→初回名言表示→ボタン押下で名言更新→別の名言表示って流れですが、<br>横から名言が流れてくるように、がんばります<br>ではではこの辺で。HappyBirthday★  </p>
+<h2 id="今後"><a href="#今後" class="headerlink" title="今後"></a>今後</h2><p>いまは英語の名言が表示されるのみなので、<br>あいだにGoogle翻訳などかませて、<br>日本語化したい。（日本語の名言APIは未だ無さそうだったので致し方ない）<br>そして現在苦戦している動き、『名言が流れてくる～』機能ですね。その名も『名言ティッカー』！！<br>今はアプリ起動→初回名言表示→ボタン押下で名言更新→別の名言表示って流れですが、<br>横から名言が流れてくるように、がんばります<br>あ、アプリ実物見たいかた、私までお声かけを～<br>ではではこの辺で。HappyBirthday★  </p>
 
         </div>
         <div id="post-footer">
@@ -270,7 +270,7 @@
                 
                 <li>Published Date: <span>2020-12-07  00:00:00</span></li>
                 
-                <li>Updated Date: <span>2020-12-07  14:40:29</span></li>
+                <li>Updated Date: <span>2020-12-07  14:48:16</span></li>
                 
                 <li class="post-category">
                     Categories:
