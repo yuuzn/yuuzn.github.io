@@ -20,7 +20,7 @@
 <meta name="verify" content="all">
     <!--Title-->
 
-<title>今日のギター 20191019 | Life is a bug sometimes compiled</title>
+<title>いまさら聞けないAPサーバ | Life is a bug sometimes compiled</title>
 
 <link rel="alternate" href="/atom.xml" title="Life is a bug sometimes compiled" type="application/atom+xml">
 
@@ -165,9 +165,9 @@
     <article id="post">
         <div id="post-header">
 
-            <h1 id="今日のギター 20191019">
+            <h1 id="いまさら聞けないAPサーバ">
                 
-                今日のギター 20191019
+                いまさら聞けないAPサーバ
                 
             </h1>
             <div class="article-meta">
@@ -175,7 +175,7 @@
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>music</span>
+        <span>skill</span>
     </span>
     
     
@@ -183,7 +183,7 @@
          <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            guitar
+            Web
             
         </span>
     </span>
@@ -191,14 +191,14 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2019/10/19</span>
+        <span class="date-meta ">2020/12/24</span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="今日のギター 20191019"
-              data-leadcloud-url="/2019/10/19/guitar-20191019/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="いまさら聞けないAPサーバ"
+              data-leadcloud-url="/2020/12/24/kikenaiAPserver/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
@@ -206,26 +206,26 @@
 
             
             
-            <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>432</strong>天之前发表，文中内容可能已经过时。如有疑问，请在评论区留言。
-            </p>
-            
         </div>
         
         <div id="post-body">
-            <h3 id="左手動き"><a href="#左手動き" class="headerlink" title="左手動き"></a>左手動き</h3><ul>
-<li>D7開放→D7</li>
-<li>3フレット6弦、2フレット3弦</li>
-<li>3フレット5弦、2フレット3弦</li>
-<li>左手はミスっても次へ進めること、止まらないこと</li>
+            <p>おひさしぶりです、AdventCalnderも残すところあと僅か！ラストのまえにサクッと最近スッキリした話を。<br>Webサーバが何をしているか基本的なことは知っていました。</p>
+<ul>
+<li>クライアント側から受取ったリクエストから、データを探し、レスポンスとしてHTMLや画像を返す</li>
 </ul>
-<h3 id="右手動き"><a href="#右手動き" class="headerlink" title="右手動き"></a>右手動き</h3><ul>
-<li>アルペジオは最初は上から弾く、オルタナティブはまだ</li>
-<li>643234</li>
-<li>6弦の杭のとこに右手固定し感覚で覚えて見ないで弾けるように</li>
-<li>リズムを刻む、間をとったり空振り早くしたりしない、一定のリズム、メトロノーム</li>
-<li>腕の位置はピックの位置から逆算、サウンドホールがおすすめ</li>
+<p>ではAPサーバは？<br>って聞かれると一瞬詰まります。。アプリケーションの実行結果を返してるんだろうけど、<br>サーバ構成で、APサーバとDBサーバしか載ってない構成もチラホラみてたので、、、<br>WebサーバとAPサーバのちがいや使い分けって？？と少しざわざわしました。</p>
+<p>つまるところ、<br>APサーバは、Webサーバからの要求に対して、アプリケーションの実行結果（動的コンテンツ）をWebサーバ返している！のでした。</p>
+<p>次にサーバ構成でWebサーバだけとか、APサーバだけとか、見たことある。そのあたりはいかに？（使い分けの話</p>
+<ul>
+<li>静的コンテンツであればWebサーバだけでいい</li>
+<li>動的コンテンツであればAPサーバ必要</li>
+<li>APサーバ単独で使うケースはほぼなし（アプリケーションを実行する機能なので）</li>
+<li>Webサーバ機能を備えているAPサーバもある（Tomcatなど。あくまで補助的なもの）</li>
+<li>PHPの場合はAPサーバを使う必要ないらしい（Apache（Webサーバ）の機能を使うことでAPサーバのような仕組みを導入できる）<br>ふむふむ。使い分けてみよう。</li>
 </ul>
+<p>続きまして、<br>クライアントサーバシステムの「サーバ」部分を3階層（Webサーバ、APサーバ、DBサーバ）に分割したのが3層アーキテクチャと。よく聞きますよね！<br>または、Webサーバ、APサーバ、DBサーバのうち、APサーバを、プレゼンテーション層・ビジネスロジック層・データアクセス層に、プログラムの構造を分けることを「3層アーキテクチャ」と指す場合もあるとか。<br>ちなみに、いわゆるMVCは、プレゼンテーション層にControllerとViewがあり、ビジネスロジック層にModelがある。<br>なので、アプリケーションの構成を検討するときに、「MVC を採用する」というだけでなく、「全体のサーバ構成は3 層で、プログラム構成はMVC にする」というのが親切だそうな。</p>
+<p>この辺りを整理していたらだいぶスッキリしてきました！よい年越しを迎えられそうです（え<br>というお話。まる。（ド基礎ですみません</p>
+<p>わかったつもりのこわさと、自身の説明時に不親切だったことを痛感。。<br>すっかり寒いですが、温かくすごしてください。楽しいクリスマスを！</p>
 
         </div>
         <div id="post-footer">
@@ -247,20 +247,20 @@
                     <a href="/about.html">yuuzn</a>
                 </li>
                 
-                <li>Published Date: <span>2019-10-19  00:00:00</span></li>
+                <li>Published Date: <span>2020-12-24  00:00:00</span></li>
                 
-                <li>Updated Date: <span>2019-12-20  00:52:36</span></li>
+                <li>Updated Date: <span>2020-12-24  16:21:31</span></li>
                 
                 <li class="post-category">
                     Categories:
                     
-                    <a href="/categories/music/">music</a>
+                    <a href="/categories/skill/">skill</a>
                     
                 </li>
                 <li class="post-tags">
                     Tags:
                     
-                    <a href="/tags/guitar/">guitar</a>
+                    <a href="/tags/Web/">Web</a>
                     
                 </li>
                 
@@ -281,10 +281,8 @@
     </article>
     <div class="article-nav">
         
-        <a href="/2019/10/27/guitar-20191027/" class="pre-post fa fa-caret-left">今日のギター 20191027</a>
         
-        
-        <a href="/2019/10/14/hello-world/" class="next-post fa">Hello World</a>
+        <a href="/2020/12/07/meigenAPIdisplay/" class="next-post fa">APIを使って『名言』をスマホに表示してみた</a>
         
     </div>
     
@@ -362,7 +360,7 @@
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#左手動き"><span class="toc-number">1.</span> <span class="toc-text">左手動き</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#右手動き"><span class="toc-number">2.</span> <span class="toc-text">右手動き</span></a></li></ol>
+    
 
 
     <script src="/js/highsong.js"></script>

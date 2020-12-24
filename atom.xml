@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuuzn.github.io/"/>
-  <updated>2020-12-07T05:48:16.036Z</updated>
+  <updated>2020-12-24T07:21:31.416Z</updated>
   <id>https://yuuzn.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>いまさら聞けないAPサーバ</title>
+    <link href="https://yuuzn.github.io/2020/12/24/kikenaiAPserver/"/>
+    <id>https://yuuzn.github.io/2020/12/24/kikenaiAPserver/</id>
+    <published>2020-12-23T15:00:00.000Z</published>
+    <updated>2020-12-24T07:21:31.416Z</updated>
+    
+    <content type="html"><![CDATA[<p>おひさしぶりです、AdventCalnderも残すところあと僅か！ラストのまえにサクッと最近スッキリした話を。<br>Webサーバが何をしているか基本的なことは知っていました。</p><ul><li>クライアント側から受取ったリクエストから、データを探し、レスポンスとしてHTMLや画像を返す</li></ul><p>ではAPサーバは？<br>って聞かれると一瞬詰まります。。アプリケーションの実行結果を返してるんだろうけど、<br>サーバ構成で、APサーバとDBサーバしか載ってない構成もチラホラみてたので、、、<br>WebサーバとAPサーバのちがいや使い分けって？？と少しざわざわしました。</p><p>つまるところ、<br>APサーバは、Webサーバからの要求に対して、アプリケーションの実行結果（動的コンテンツ）をWebサーバ返している！のでした。</p><p>次にサーバ構成でWebサーバだけとか、APサーバだけとか、見たことある。そのあたりはいかに？（使い分けの話</p><ul><li>静的コンテンツであればWebサーバだけでいい</li><li>動的コンテンツであればAPサーバ必要</li><li>APサーバ単独で使うケースはほぼなし（アプリケーションを実行する機能なので）</li><li>Webサーバ機能を備えているAPサーバもある（Tomcatなど。あくまで補助的なもの）</li><li>PHPの場合はAPサーバを使う必要ないらしい（Apache（Webサーバ）の機能を使うことでAPサーバのような仕組みを導入できる）<br>ふむふむ。使い分けてみよう。</li></ul><p>続きまして、<br>クライアントサーバシステムの「サーバ」部分を3階層（Webサーバ、APサーバ、DBサーバ）に分割したのが3層アーキテクチャと。よく聞きますよね！<br>または、Webサーバ、APサーバ、DBサーバのうち、APサーバを、プレゼンテーション層・ビジネスロジック層・データアクセス層に、プログラムの構造を分けることを「3層アーキテクチャ」と指す場合もあるとか。<br>ちなみに、いわゆるMVCは、プレゼンテーション層にControllerとViewがあり、ビジネスロジック層にModelがある。<br>なので、アプリケーションの構成を検討するときに、「MVC を採用する」というだけでなく、「全体のサーバ構成は3 層で、プログラム構成はMVC にする」というのが親切だそうな。</p><p>この辺りを整理していたらだいぶスッキリしてきました！よい年越しを迎えられそうです（え<br>というお話。まる。（ド基礎ですみません</p><p>わかったつもりのこわさと、自身の説明時に不親切だったことを痛感。。<br>すっかり寒いですが、温かくすごしてください。楽しいクリスマスを！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;おひさしぶりです、AdventCalnderも残すところあと僅か！ラストのまえにサクッと最近スッキリした話を。&lt;br&gt;Webサーバが何をしているか基本的なことは知っていました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;クライアント側から受取ったリクエストから、データを探し、レスポンスとし
+      
+    
+    </summary>
+    
+    
+      <category term="skill" scheme="https://yuuzn.github.io/categories/skill/"/>
+    
+    
+      <category term="Web" scheme="https://yuuzn.github.io/tags/Web/"/>
+    
+  </entry>
   
   <entry>
     <title>APIを使って『名言』をスマホに表示してみた</title>
