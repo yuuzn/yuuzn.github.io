@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuuzn.github.io/"/>
-  <updated>2020-12-24T07:21:31.416Z</updated>
+  <updated>2021-01-24T02:57:09.011Z</updated>
   <id>https://yuuzn.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ヒヤリハット体験を見過ごしてないでしょうか</title>
+    <link href="https://yuuzn.github.io/2021/01/08/hiyari_hat/"/>
+    <id>https://yuuzn.github.io/2021/01/08/hiyari_hat/</id>
+    <published>2021-01-07T15:00:00.000Z</published>
+    <updated>2021-01-24T02:57:09.011Z</updated>
+    
+    <content type="html"><![CDATA[<p>某製薬企業さまの製品自主回収が話題となっておりましたが、<br>そこで知ったのが『ハインリッヒの法則』です。</p><p>(事象自体は知ってて、名前があることに年末知りました！Yahoo!ニュースのコメント読んでてよかった（笑） </p><br>大学院で化学実験に明け暮れていた頃、先輩に、 <blockquote><p>『大事故のまえには必ずといっていいほど、小事故が起きてるんだよ。だから、今日ミス多いなとか、なんか上手くいかないやってとき、今日は実験は止める。くらいでいたほうがいい。』 </p></blockquote><p>と教えてもらいました。 </p><br>それ以降、自身のミスや調子を意識的にモニタリングするように過ごしてきました。疲れ感じだしたら早めに休んどくとか。 予防医療も流行ってますし。 <p>で、これは日頃の仕事にも通じるところがあるなと改めて痛感。<br>今日注意散漫だなとか、ここの記述見過ごしてたとか、連続で起きたときは、自身に黄色信号をだすようにしています。ソースコードも余計なピリオドひとつでいのちとりですから。 結構神経つかう仕事ですし。 </p><br>自身のミスには比較的気づけるようになってきたので、次はパフォーマンスをいかにキープするか、自分でもっとコントロールできるようになりたい、最近の課題です。 <p>言いたかったのは、<br>なにかと慌ただしい時期かもしれませんが、ヒヤリハット体験をスルーせず、あらためてお気をつけてくださいませ（自戒を込めて<br><br><br>ということでした！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;某製薬企業さまの製品自主回収が話題となっておりましたが、&lt;br&gt;そこで知ったのが『ハインリッヒの法則』です。&lt;/p&gt;
+&lt;p&gt;(事象自体は知ってて、名前があることに年末知りました！Yahoo!ニュースのコメント読んでてよかった（笑） &lt;/p&gt;
+&lt;br&gt;
+大学院で化学実験に明け
+      
+    
+    </summary>
+    
+    
+      <category term="skill" scheme="https://yuuzn.github.io/categories/skill/"/>
+    
+    
+      <category term="consideration" scheme="https://yuuzn.github.io/tags/consideration/"/>
+    
+      <category term="advise" scheme="https://yuuzn.github.io/tags/advise/"/>
+    
+  </entry>
   
   <entry>
     <title>いまさら聞けないAPサーバ</title>

@@ -20,7 +20,7 @@
 <meta name="verify" content="all">
     <!--Title-->
 
-<title>いまさら聞けないAPサーバ | Life is a bug sometimes compiled</title>
+<title>ヒヤリハット体験を見過ごしてないでしょうか | Life is a bug sometimes compiled</title>
 
 <link rel="alternate" href="/atom.xml" title="Life is a bug sometimes compiled" type="application/atom+xml">
 
@@ -165,9 +165,9 @@
     <article id="post">
         <div id="post-header">
 
-            <h1 id="いまさら聞けないAPサーバ">
+            <h1 id="ヒヤリハット体験を見過ごしてないでしょうか">
                 
-                いまさら聞けないAPサーバ
+                ヒヤリハット体験を見過ごしてないでしょうか
                 
             </h1>
             <div class="article-meta">
@@ -183,7 +183,7 @@
          <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            Web
+            consideration
             
         </span>
     </span>
@@ -191,14 +191,14 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2020/12/24</span>
+        <span class="date-meta ">2021/01/08</span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="いまさら聞けないAPサーバ"
-              data-leadcloud-url="/2020/12/24/kikenaiAPserver/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="ヒヤリハット体験を見過ごしてないでしょうか"
+              data-leadcloud-url="/2021/01/08/hiyari_hat/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
@@ -209,23 +209,23 @@
         </div>
         
         <div id="post-body">
-            <p>おひさしぶりです、AdventCalnderも残すところあと僅か！ラストのまえにサクッと最近スッキリした話を。<br>Webサーバが何をしているか基本的なことは知っていました。</p>
-<ul>
-<li>クライアント側から受取ったリクエストから、データを探し、レスポンスとしてHTMLや画像を返す</li>
-</ul>
-<p>ではAPサーバは？<br>って聞かれると一瞬詰まります。。アプリケーションの実行結果を返してるんだろうけど、<br>サーバ構成で、APサーバとDBサーバしか載ってない構成もチラホラみてたので、、、<br>WebサーバとAPサーバのちがいや使い分けって？？と少しざわざわしました。</p>
-<p>つまるところ、<br>APサーバは、Webサーバからの要求に対して、アプリケーションの実行結果（動的コンテンツ）をWebサーバ返している！のでした。</p>
-<p>次にサーバ構成でWebサーバだけとか、APサーバだけとか、見たことある。そのあたりはいかに？（使い分けの話</p>
-<ul>
-<li>静的コンテンツであればWebサーバだけでいい</li>
-<li>動的コンテンツであればAPサーバ必要</li>
-<li>APサーバ単独で使うケースはほぼなし（アプリケーションを実行する機能なので）</li>
-<li>Webサーバ機能を備えているAPサーバもある（Tomcatなど。あくまで補助的なもの）</li>
-<li>PHPの場合はAPサーバを使う必要ないらしい（Apache（Webサーバ）の機能を使うことでAPサーバのような仕組みを導入できる）<br>ふむふむ。使い分けてみよう。</li>
-</ul>
-<p>続きまして、<br>クライアントサーバシステムの「サーバ」部分を3階層（Webサーバ、APサーバ、DBサーバ）に分割したのが3層アーキテクチャと。よく聞きますよね！<br>または、Webサーバ、APサーバ、DBサーバのうち、APサーバを、プレゼンテーション層・ビジネスロジック層・データアクセス層に、プログラムの構造を分けることを「3層アーキテクチャ」と指す場合もあるとか。<br>ちなみに、いわゆるMVCは、プレゼンテーション層にControllerとViewがあり、ビジネスロジック層にModelがある。<br>なので、アプリケーションの構成を検討するときに、「MVC を採用する」というだけでなく、「全体のサーバ構成は3 層で、プログラム構成はMVC にする」というのが親切だそうな。</p>
-<p>この辺りを整理していたらだいぶスッキリしてきました！よい年越しを迎えられそうです（え<br>というお話。まる。（ド基礎ですみません</p>
-<p>わかったつもりのこわさと、自身の説明時に不親切だったことを痛感。。<br>すっかり寒いですが、温かくすごしてください。楽しいクリスマスを！</p>
+            <p>某製薬企業さまの製品自主回収が話題となっておりましたが、<br>そこで知ったのが『ハインリッヒの法則』です。</p>
+<p>(事象自体は知ってて、名前があることに年末知りました！Yahoo!ニュースのコメント読んでてよかった（笑） </p>
+<br>
+大学院で化学実験に明け暮れていた頃、先輩に、 
+
+<blockquote>
+<p>『大事故のまえには必ずといっていいほど、小事故が起きてるんだよ。だから、今日ミス多いなとか、なんか上手くいかないやってとき、今日は実験は止める。くらいでいたほうがいい。』 </p>
+</blockquote>
+<p>と教えてもらいました。 </p>
+<br>
+それ以降、自身のミスや調子を意識的にモニタリングするように過ごしてきました。疲れ感じだしたら早めに休んどくとか。 予防医療も流行ってますし。 
+
+<p>で、これは日頃の仕事にも通じるところがあるなと改めて痛感。<br>今日注意散漫だなとか、ここの記述見過ごしてたとか、連続で起きたときは、自身に黄色信号をだすようにしています。ソースコードも余計なピリオドひとつでいのちとりですから。 結構神経つかう仕事ですし。 </p>
+<br>
+自身のミスには比較的気づけるようになってきたので、次はパフォーマンスをいかにキープするか、自分でもっとコントロールできるようになりたい、最近の課題です。 
+
+<p>言いたかったのは、<br>なにかと慌ただしい時期かもしれませんが、ヒヤリハット体験をスルーせず、あらためてお気をつけてくださいませ（自戒を込めて<br><br><br>ということでした！</p>
 
         </div>
         <div id="post-footer">
@@ -247,9 +247,9 @@
                     <a href="/about.html">yuuzn</a>
                 </li>
                 
-                <li>Published Date: <span>2020-12-24  00:00:00</span></li>
+                <li>Published Date: <span>2021-01-08  00:00:00</span></li>
                 
-                <li>Updated Date: <span>2020-12-24  16:21:31</span></li>
+                <li>Updated Date: <span>2021-01-24  11:57:09</span></li>
                 
                 <li class="post-category">
                     Categories:
@@ -260,7 +260,9 @@
                 <li class="post-tags">
                     Tags:
                     
-                    <a href="/tags/Web/">Web</a>
+                    <a href="/tags/consideration/">consideration</a>
+                    
+                    <a href="/tags/advise/">advise</a>
                     
                 </li>
                 
@@ -281,10 +283,8 @@
     </article>
     <div class="article-nav">
         
-        <a href="/2021/01/08/hiyari_hat/" class="pre-post fa fa-caret-left">ヒヤリハット体験を見過ごしてないでしょうか</a>
         
-        
-        <a href="/2020/12/07/meigenAPIdisplay/" class="next-post fa">APIを使って『名言』をスマホに表示してみた</a>
+        <a href="/2020/12/24/kikenaiAPserver/" class="next-post fa">いまさら聞けないAPサーバ</a>
         
     </div>
     
