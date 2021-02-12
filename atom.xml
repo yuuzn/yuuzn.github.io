@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Life is a bug sometimes compiled</title>
   
-  
+  <subtitle>/*私の頭のなかの宇宙*/</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuuzn.github.io/"/>
