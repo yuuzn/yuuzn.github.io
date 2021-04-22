@@ -3,7 +3,7 @@
     
     
     <entry>
-        <title></title>
+        <title><![CDATA[Flutter開発参考サイトまとめ]]></title>
         <url>https://yuuzn.github.io/2021/04/22/flutter-reference/</url>
         <content type="html"><![CDATA[<p>参考文献<br><br> ★…オフィシャル<br><br> ☆…オフィシャルに近い<br></p>
 <h1 id="基本から順に学べるサイト"><a href="#基本から順に学べるサイト" class="headerlink" title="基本から順に学べるサイト"></a>基本から順に学べるサイト</h1><ul>
@@ -149,6 +149,22 @@
 </ul>
 ]]></content>
         
+        <categories>
+            
+            <category> flutter </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> flutter </tag>
+            
+            <tag> study </tag>
+            
+            <tag> development </tag>
+            
+        </tags>
         
     </entry>
     
