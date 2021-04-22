@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuuzn.github.io/"/>
-  <updated>2021-02-18T13:20:12.915Z</updated>
+  <updated>2021-04-22T10:14:09.316Z</updated>
   <id>https://yuuzn.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://yuuzn.github.io/2021/04/22/flutter-reference/"/>
+    <id>https://yuuzn.github.io/2021/04/22/flutter-reference/</id>
+    <published>2021-04-22T10:14:08.968Z</published>
+    <updated>2021-04-22T10:14:09.316Z</updated>
+    
+    <content type="html"><![CDATA[<p>参考文献<br><br> ★…オフィシャル<br><br> ☆…オフィシャルに近い<br></p><h1 id="基本から順に学べるサイト"><a href="#基本から順に学べるサイト" class="headerlink" title="基本から順に学べるサイト"></a>基本から順に学べるサイト</h1><ul><li>Flutter Doc JP ☆<ul><li><a href="https://flutter.ctrnost.com/" target="_blank" rel="noopener">https://flutter.ctrnost.com/</a></li></ul></li><li>はじめてのFlutterアプリ開発<ul><li><a href="https://zenn.dev/omatsu/books/9ff274f3045092067378/viewer/first-flutter02" target="_blank" rel="noopener">https://zenn.dev/omatsu/books/9ff274f3045092067378/viewer/first-flutter02</a></li></ul></li><li>KBOYのFlutter大学<ul><li><a href="https://zenn.dev/kboy/books/ca6a9c93fd23f3/viewer/ea34d9" target="_blank" rel="noopener">https://zenn.dev/kboy/books/ca6a9c93fd23f3/viewer/ea34d9</a></li><li>Youtubeも人気あるらしい</li></ul></li><li>社内の「マイクロラーニング」で視聴できるFlutter講座の動画も質が高いです<ul><li><a href="https://www.linkedin.com/learning/flutter-part-01-introduction/the-anatomy-of-a-flutter-app?u=2173282" target="_blank" rel="noopener">https://www.linkedin.com/learning/flutter-part-01-introduction/the-anatomy-of-a-flutter-app?u=2173282</a></li><li><a href="https://www.linkedin.com/learning/flutter-part-03-flutter-widgets/flutter-card-and-listtile-widgets?u=2173282" target="_blank" rel="noopener">https://www.linkedin.com/learning/flutter-part-03-flutter-widgets/flutter-card-and-listtile-widgets?u=2173282</a></li></ul></li></ul><h1 id="Widgetの使い方"><a href="#Widgetの使い方" class="headerlink" title="Widgetの使い方"></a>Widgetの使い方</h1><ul><li>widgets library ★<ul><li><a href="https://api.flutter.dev/flutter/widgets/widgets-library.html" target="_blank" rel="noopener">https://api.flutter.dev/flutter/widgets/widgets-library.html</a></li><li>『Classes』の一覧に各Widgetのリンクがある</li></ul></li><li>Widget category ★<ul><li><a href="https://flutter.dev/docs/development/ui/widgets" target="_blank" rel="noopener">https://flutter.dev/docs/development/ui/widgets</a></li></ul></li><li>Widget逆引き集<ul><li><a href="https://capytaku.com/flutter-reverse-pull-collection/#%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88%E3%81%AE%E3%83%9D%E3%82%B8%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E6%B1%BA%E3%82%81%E3%81%9F%E3%81%84" target="_blank" rel="noopener">https://capytaku.com/flutter-reverse-pull-collection/#%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88%E3%81%AE%E3%83%9D%E3%82%B8%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E6%B1%BA%E3%82%81%E3%81%9F%E3%81%84</a> </li></ul></li><li>各種マテリアルWidgetの使い方<ul><li><a href="https://flutter.keicode.com/basics/index-material.php" target="_blank" rel="noopener">https://flutter.keicode.com/basics/index-material.php</a></li></ul></li><li>Flutter Awesome ★？？<ul><li><a href="https://flutterawesome.com/" target="_blank" rel="noopener">https://flutterawesome.com/</a></li><li>アイディア集？的な。見た目から入れる</li></ul></li></ul><h1 id="各機能実装方法"><a href="#各機能実装方法" class="headerlink" title="各機能実装方法"></a>各機能実装方法</h1><ul><li>cookbook ★<ul><li><a href="https://flutter.dev/docs/cookbook" target="_blank" rel="noopener">https://flutter.dev/docs/cookbook</a></li><li>例：画面遷移　<a href="https://flutter.dev/docs/cookbook/navigation/named-routes" target="_blank" rel="noopener">https://flutter.dev/docs/cookbook/navigation/named-routes</a></li></ul></li></ul><h1 id="パッケージ"><a href="#パッケージ" class="headerlink" title="パッケージ"></a>パッケージ</h1><ul><li>pub.dev ★<ul><li><a href="https://pub.dev/" target="_blank" rel="noopener">https://pub.dev/</a></li><li>例：音声入力　<a href="https://pub.dev/flutter/packages?q=speech" target="_blank" rel="noopener">https://pub.dev/flutter/packages?q=speech</a><ul><li>Speech_to_text <a href="https://pub.dev/packages/speech_to_text" target="_blank" rel="noopener">https://pub.dev/packages/speech_to_text</a>  ←バージョンが合わず、断念</li><li>flutter_speech　<a href="https://pub.dev/packages/flutter_speech/install" target="_blank" rel="noopener">https://pub.dev/packages/flutter_speech/install</a>　←現在はこれで音声入力可な状態</li><li>Speech_recognition <a href="https://pub.dev/packages/speech_recognition" target="_blank" rel="noopener">https://pub.dev/packages/speech_recognition</a> ←まだ試していない　　</li></ul></li></ul></li></ul><h1 id="データベース検討"><a href="#データベース検討" class="headerlink" title="データベース検討"></a>データベース検討</h1><ul><li>Dart/FlutterのローカルDBの比較<ul><li><a href="https://kabochapo.hateblo.jp/entry/2020/02/01/144411" target="_blank" rel="noopener">https://kabochapo.hateblo.jp/entry/2020/02/01/144411</a></li></ul></li><li>NoSQL HIVE<ul><li><a href="https://qiita.com/kasa_le/items/f39d759741c736f1d600" target="_blank" rel="noopener">https://qiita.com/kasa_le/items/f39d759741c736f1d600</a></li><li><a href="https://crieit.net/posts/Flutter-Hive" target="_blank" rel="noopener">https://crieit.net/posts/Flutter-Hive</a></li></ul></li><li>SQLite(SQFLite)使用方法<ul><li><a href="https://flutter.ctrnost.com/logic/sqlite/" target="_blank" rel="noopener">https://flutter.ctrnost.com/logic/sqlite/</a></li><li><a href="https://www.finddevguides.com/Flutter-database-concepts" target="_blank" rel="noopener">https://www.finddevguides.com/Flutter-database-concepts</a></li><li><a href="https://qiita.com/umechanhika/items/47429c4d37ac733385ab" target="_blank" rel="noopener">https://qiita.com/umechanhika/items/47429c4d37ac733385ab</a></li><li><a href="https://tamappe.com/2020/02/10/2020-02-10-200000/" target="_blank" rel="noopener">https://tamappe.com/2020/02/10/2020-02-10-200000/</a></li><li><a href="https://iganin.hatenablog.com/entry/2019/01/09/010804" target="_blank" rel="noopener">https://iganin.hatenablog.com/entry/2019/01/09/010804</a></li><li><a href="https://kehalife.com/flutter-sqflite/" target="_blank" rel="noopener">https://kehalife.com/flutter-sqflite/</a> </li></ul></li></ul><h1 id="同期非同期処理"><a href="#同期非同期処理" class="headerlink" title="同期非同期処理"></a>同期非同期処理</h1><ul><li>Dartのasync/awaitを理解したい<ul><li><a href="https://medium.com/@kawanojieee/dart-async-await-394846fb3d2c" target="_blank" rel="noopener">https://medium.com/@kawanojieee/dart-async-await-394846fb3d2c</a></li></ul></li></ul><h1 id="AndroidStudio-×-svn"><a href="#AndroidStudio-×-svn" class="headerlink" title="AndroidStudio × svn"></a>AndroidStudio × svn</h1><ul><li>svn連携方法<ul><li><a href="https://gihyo.jp/dev/serial/01/android_studio/0028" target="_blank" rel="noopener">https://gihyo.jp/dev/serial/01/android_studio/0028</a></li></ul></li><li>コミット通知設定<ul><li><a href="https://gihyo.jp/dev/serial/01/android_studio/0029?page=1" target="_blank" rel="noopener">https://gihyo.jp/dev/serial/01/android_studio/0029?page=1</a></li></ul></li></ul><h1 id="機能事例集"><a href="#機能事例集" class="headerlink" title="機能事例集"></a>機能事例集</h1><ul><li>テーマごと<ul><li><a href="https://dev.classmethod.jp/tags/flutter/" target="_blank" rel="noopener">https://dev.classmethod.jp/tags/flutter/</a></li></ul></li></ul><h1 id="Flutterコマンド"><a href="#Flutterコマンド" class="headerlink" title="Flutterコマンド"></a>Flutterコマンド</h1><ul><li>Flutterコマンド一覧まとめ<ul><li><a href="https://qiita.com/kurun_pan/items/f9251b1827ce9dca9e14" target="_blank" rel="noopener">https://qiita.com/kurun_pan/items/f9251b1827ce9dca9e14</a></li></ul></li></ul><h1 id="便利ツール"><a href="#便利ツール" class="headerlink" title="便利ツール"></a>便利ツール</h1><ul><li>Flutter Studio<ul><li><a href="https://flutterstudio.app/" target="_blank" rel="noopener">https://flutterstudio.app/</a></li><li>実装したいパーツをドラッグすると、ソースコードが生成される（基本的なパーツのみ有る）</li></ul></li></ul><h1 id="本"><a href="#本" class="headerlink" title="本"></a>本</h1><p>紙の本は4冊くらいしか現時点で市販されていない。。おススメ順に上から</p><ul><li>基礎から学ぶ Flutter<ul><li><a href="https://www.amazon.co.jp/%E5%9F%BA%E7%A4%8E%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6-Flutter-%E7%9F%B3%E4%BA%95%E5%B9%B8%E6%AC%A1-ebook/dp/B082XQ81FH/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;dchild=1&amp;keywords=flutter&amp;qid=1617176370&amp;s=books&amp;sr=1-1" target="_blank" rel="noopener">https://www.amazon.co.jp/%E5%9F%BA%E7%A4%8E%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6-Flutter-%E7%9F%B3%E4%BA%95%E5%B9%B8%E6%AC%A1-ebook/dp/B082XQ81FH/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;dchild=1&amp;keywords=flutter&amp;qid=1617176370&amp;s=books&amp;sr=1-1</a></li><li>店頭に無かった&amp;存在に気付けず、買いそびれた。もういちど買いなおすならこれを買う</li></ul></li><li>Android/iOSクロス開発フレームワーク Flutter入門<ul><li><a href="https://www.amazon.co.jp/Android-iOS%E3%82%AF%E3%83%AD%E3%82%B9%E9%96%8B%E7%99%BA%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF-Flutter%E5%85%A5%E9%96%80-%E6%8E%8C%E7%94%B0%E6%B4%A5%E8%80%B6%E4%B9%83/dp/4798055832/ref=sr_1_4?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;dchild=1&amp;keywords=flutter&amp;qid=1617176370&amp;s=books&amp;sr=1-4" target="_blank" rel="noopener">https://www.amazon.co.jp/Android-iOS%E3%82%AF%E3%83%AD%E3%82%B9%E9%96%8B%E7%99%BA%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF-Flutter%E5%85%A5%E9%96%80-%E6%8E%8C%E7%94%B0%E6%B4%A5%E8%80%B6%E4%B9%83/dp/4798055832/ref=sr_1_4?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;dchild=1&amp;keywords=flutter&amp;qid=1617176370&amp;s=books&amp;sr=1-4</a></li><li>少々古いが理論までしっかり書いてあった</li></ul></li><li>Flutter　モバイルアプリ開発バイブル<ul><li><a href="https://www.amazon.co.jp/Flutter-%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%83%90%E3%82%A4%E3%83%96%E3%83%AB-%E5%8D%97%E9%87%8C-%E5%8B%87%E6%B0%97-ebook/dp/B07Z9DYYBY/ref=sr_1_3?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;dchild=1&amp;keywords=flutter&amp;qid=1617176370&amp;s=books&amp;sr=1-3" target="_blank" rel="noopener">https://www.amazon.co.jp/Flutter-%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%83%90%E3%82%A4%E3%83%96%E3%83%AB-%E5%8D%97%E9%87%8C-%E5%8B%87%E6%B0%97-ebook/dp/B07Z9DYYBY/ref=sr_1_3?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;dchild=1&amp;keywords=flutter&amp;qid=1617176370&amp;s=books&amp;sr=1-3</a></li><li>バイブルと言えるほど書いてなく、いまひとつだった</li></ul></li><li>はじめてのFlutter<ul><li><a href="https://www.amazon.co.jp/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AEFlutter-I%E3%83%BB-BOOKS-%E6%96%B0%E4%BA%95-%E5%85%8B%E4%BA%BA/dp/4777521311/ref=sr_1_2?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;dchild=1&amp;keywords=flutter&amp;qid=1617176370&amp;s=books&amp;sr=1-2" target="_blank" rel="noopener">https://www.amazon.co.jp/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AEFlutter-I%E3%83%BB-BOOKS-%E6%96%B0%E4%BA%95-%E5%85%8B%E4%BA%BA/dp/4777521311/ref=sr_1_2?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;dchild=1&amp;keywords=flutter&amp;qid=1617176370&amp;s=books&amp;sr=1-2</a></li><li>このくらいなら本でなく、Webサイト見ながらでカバーできそう</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;参考文献&lt;br&gt;&lt;br&gt; ★…オフィシャル&lt;br&gt;&lt;br&gt; ☆…オフィシャルに近い&lt;br&gt;&lt;/p&gt;
+&lt;h1 id=&quot;基本から順に学べるサイト&quot;&gt;&lt;a href=&quot;#基本から順に学べるサイト&quot; class=&quot;headerlink&quot; title=&quot;基本から順に学べるサイト&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>全国民に観てほしい純愛ドラマ～全私が泣いた～</title>
@@ -539,34 +562,6 @@
     
     
       <category term="guitar" scheme="https://yuuzn.github.io/tags/guitar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>アイネ・クライネ・ナハトムジーク</title>
-    <link href="https://yuuzn.github.io/2019/09/22/ainekuraine/"/>
-    <id>https://yuuzn.github.io/2019/09/22/ainekuraine/</id>
-    <published>2019-09-21T15:00:00.000Z</published>
-    <updated>2019-12-19T15:36:40.310Z</updated>
-    
-    <content type="html"><![CDATA[<p>色んな人の人生が重なり合って、<br>みんな一人で生きてるんじゃないんだって想えた映画でした。<br>斉藤さんの歌詞が何度も頭に浮かんだり、<br>伊坂さんの小説のシーンを思い出したり、<br>台詞にクスッと笑えたり、ジーンときたり、<br>作り手のメッセージが凄く伝わってきました。<br>どの世代の人が観ても楽しめる映画だと思います!<br>期待を遥かに超えた仕上がりに感無量！！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;色んな人の人生が重なり合って、&lt;br&gt;みんな一人で生きてるんじゃないんだって想えた映画でした。&lt;br&gt;斉藤さんの歌詞が何度も頭に浮かんだり、&lt;br&gt;伊坂さんの小説のシーンを思い出したり、&lt;br&gt;台詞にクスッと笑えたり、ジーンときたり、&lt;br&gt;作り手のメッセージが凄く伝わって
-      
-    
-    </summary>
-    
-    
-      <category term="life" scheme="https://yuuzn.github.io/categories/life/"/>
-    
-    
-      <category term="movie" scheme="https://yuuzn.github.io/tags/movie/"/>
-    
-      <category term="saitou-kazuyoshi" scheme="https://yuuzn.github.io/tags/saitou-kazuyoshi/"/>
     
   </entry>
   
